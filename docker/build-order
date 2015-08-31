@@ -5,7 +5,7 @@ nodejs
 elasticsearch
 elasticsearch-logstash
 hadoop
-jupyterhub
+#jupyterhub
 spark
 storm
 sx-server
