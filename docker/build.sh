@@ -7,8 +7,8 @@ ARCH=$(uname -m)
 DOCKER="/usr/bin/docker"
 
 function buildDocker() {
-    $REPO=$1
-    $ARCH=$2
+    REPO=$1
+    ARCH=$2
 
     [[! -e "./$REPO/Dockerfile" ]] && echo "No dockerfile found in repo $REPO" && exit
     [[! -e "./$REPO/vars" ]] && echo "No vars file found in repo $REPO" && exit
@@ -24,8 +24,8 @@ function buildDocker() {
 }
 
 function pushImage() {
-    $REPO=$1
-    $ARCH=$2
+    REPO=$1
+    ARCH=$2
 
     source ./$REPO/vars
 
