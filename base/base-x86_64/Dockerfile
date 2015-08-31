@@ -9,13 +9,13 @@ RUN mkdir -p /opt/bb
 
 # -- create the bb user and bigboards group
 RUN groupadd -r bigboards
-RUN useradd bb -G bigboards
+RUN useradd bb -m -G bigboards
 
 # -- change the permissions on the bigboards directory structure
 RUN chown bb /opt/bb
 
 # -- change the password for the bigboards user
-RUN echo 'bb:Swh^bdl' | chpasswd
+RUN echo 'bb:bigboards' | chpasswd
 
 # -- make sure the bb user has passwordless sudo rights
 RUN cp /etc/sudoers /etc/sudoers.orig && \
