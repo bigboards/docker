@@ -12,6 +12,7 @@ RUN \
 
 # Install NGINX
 RUN \
+  apt-get update &&
   apt-get install -y nginx-full
 
 #         ES
