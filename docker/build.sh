@@ -27,6 +27,8 @@ function pushImage() {
     $REPO=$1
     $ARCH=$2
 
+    source ./$REPO/vars
+
     IMAGE_NAME="bigboards/${REPO}-${ARCH}:${VERSION}"
 
     echo "Pushing ${IMAGE_NAME}"
