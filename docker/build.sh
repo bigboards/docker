@@ -10,8 +10,8 @@ function buildDocker() {
     REPO=$1
     ARCH=$2
 
-    [[! -e "./$REPO/Dockerfile" ]] && echo "No dockerfile found in repo $REPO" && exit
-    [[! -e "./$REPO/vars" ]] && echo "No vars file found in repo $REPO" && exit
+    [[ ! -e "./$REPO/Dockerfile" ]] && echo "No dockerfile found in repo $REPO" && exit
+    [[ ! -e "./$REPO/vars" ]] && echo "No vars file found in repo $REPO" && exit
 
     sed -i -- "s/__arch__/${ARCH}/g" ./${REPO}/Dockerfile
 
