@@ -2,8 +2,8 @@ java-7
 #notebook
 nodejs
 
-elasticsearch
-elasticsearch-logstash
+#elasticsearch
+#elasticsearch-logstash
 hadoop
 #jupyterhub
 spark
@@ -11,7 +11,7 @@ storm
 sx-server
 zookeeper
 
-elasticsearch-kibana
-elasticsearch-marvel
-elasticsearch-shield
+#elasticsearch-kibana
+#elasticsearch-marvel
+#elasticsearch-shield
 #pyspark
