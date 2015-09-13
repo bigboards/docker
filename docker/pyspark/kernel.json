@@ -4,14 +4,20 @@
   "argv": [
     "/usr/bin/python2",
     "-m",
-    "IPython.kernel",
+    "jupyter_client",
     "-f",
     "{connection_file}"
   ],
   "env": {
-    "SPARK_HOME": "/opt/spark",
     "PYTHONPATH": "/opt/spark/python/:/opt/spark/python/lib/py4j-0.8.2.1-src.zip",
     "PYTHONSTARTUP": "/opt/spark/python/pyspark/shell.py",
-    "PYSPARK_SUBMIT_ARGS": "pyspark-shell"
+
+    "HADOOP_HOME": "/opt/spark",
+    "HADOOP_CONF_DIR": "/tmp/jupyterhub",
+
+    "SPARK_HOME": "/opt/spark",
+    "SPARK_LOCAL_DIRS": "/tmp/spark/local",
+
+    "PYSPARK_SUBMIT_ARGS": "--master yarn-client pyspark-shell"
   }
 }

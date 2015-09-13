@@ -39,4 +39,4 @@ c.Authenticator.admin_users = {'bb'}
 # this config could also be put in
 # /etc/ipython/ipython_notebook_config.py
 c.Spawner.notebook_dir = '/data'
-c.Spawner.args = ['--NotebookApp.default_url=/notebooks/Welcome.ipynb']
+c.Spawner.args = ['--NotebookApp.default_url=/tree']
