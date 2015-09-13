@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM bigboards/java-7-armv7l
+FROM bigboards/java-7-__arch__
 
 MAINTAINER bigboards
 USER root
