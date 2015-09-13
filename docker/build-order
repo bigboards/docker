@@ -8,7 +8,7 @@ hadoop
 #jupyterhub
 spark
 storm
-sx-server
+#sx-server
 zookeeper
 
 #elasticsearch-kibana
