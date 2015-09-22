@@ -23,11 +23,11 @@ RUN \
   mv /$ES_PKG_NAME /elasticsearch
 
 # Install Sigar
-ADD libsigar-arm-linux.so /elasticsearch/lib/sigar/libsigar-arm-linux.so
-ADD libsigar-amd64-linux.so /elasticsearch/lib/sigar/libsigar-amd64-linux.so
+ADD libsigar-*.so /elasticsearch/lib/sigar/
 
-RUN /elasticsearch/bin/plugin -i lmenezes/elasticsearch-kopf/master
-RUN /elasticsearch/bin/plugin -i mobz/elasticsearch-head/master
+RUN \
+  /elasticsearch/bin/plugin -i lmenezes/elasticsearch-kopf/master && \
+  /elasticsearch/bin/plugin -i mobz/elasticsearch-head/master
 
 # Define default command.
 CMD ["/elasticsearch/bin/elasticsearch"]
