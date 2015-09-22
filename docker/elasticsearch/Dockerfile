@@ -9,7 +9,7 @@ FROM bigboards/java-7-__arch__
 
 MAINTAINER bigboards
 USER root
-ENV ES_PKG_NAME elasticsearch-1.4.2
+ENV ES_PKG_NAME elasticsearch-1.7.1
 
 # install curl
 RUN apt-get update && apt-get install -y wget
@@ -24,8 +24,10 @@ RUN \
 
 # Install Sigar
 ADD libsigar-arm-linux.so /elasticsearch/lib/sigar/libsigar-arm-linux.so
+ADD libsigar-amd64-linux.so /elasticsearch/lib/sigar/libsigar-amd64-linux.so
 
 RUN /elasticsearch/bin/plugin -i lmenezes/elasticsearch-kopf/master
+RUN /elasticsearch/bin/plugin -i mobz/elasticsearch-head/master
 
 # Define default command.
 CMD ["/elasticsearch/bin/elasticsearch"]
